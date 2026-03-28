@@ -99,6 +99,7 @@ from twilioapis.apis.notify_v_1_notification_api import (
 from twilioapis.apis.notify_v_1_service_api import (
     NotifyV1ServiceApi,
 )
+from twilioapis.apis.sms_api import SmsApi
 from twilioapis.apis.taskrouter_v_1_activity_api import (
     TaskrouterV1ActivityApi,
 )
@@ -509,6 +510,11 @@ class TwilioapisClient(object):
     def verify_v_2_verification_check(self):
         """Provide access to the VerifyV2VerificationCheckApi endpoints."""
         return VerifyV2VerificationCheckApi(self.global_configuration)
+
+    @LazyProperty
+    def sms(self):
+        """Provide access to the SmsApi endpoints."""
+        return SmsApi(self.global_configuration)
 
     def __init__(self, http_client_instance=None,
                  override_http_client_configuration=False, http_call_back=None,

@@ -31,6 +31,7 @@ __all__ = [
     "notify_v_1_credential_api",
     "notify_v_1_notification_api",
     "notify_v_1_service_api",
+    "sms_api",
     "taskrouter_v_1_activity_api",
     "taskrouter_v_1_event_api",
     "taskrouter_v_1_task_api",

@@ -64,6 +64,7 @@ class Server(Enum):
     DEFAULT3 = 3
     DEFAULT4 = 4
     DEFAULT5 = 5
+    DEFAULT6 = 6
 
     @classmethod
     def from_value(cls, value, default=None):
@@ -190,6 +191,7 @@ class Configuration(HttpClientConfiguration):
             Server.DEFAULT3: "https://notify.twilio.com",
             Server.DEFAULT4: "https://taskrouter.twilio.com",
             Server.DEFAULT5: "https://verify.twilio.com",
+            Server.DEFAULT6: "https://api.twilio.com",
         },
     }
 
